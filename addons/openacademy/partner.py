@@ -15,7 +15,7 @@ class partner(models.Model):
         )
     session_ids = fields.Many2many(
         'openacademy.session',
-        'openacademy_partner_ids_session_ids_rel',
+        'openacademy_attendee_ids_session_ids_rel',
         'partner_id',
         'session_id',
         string='Attended Sessions',

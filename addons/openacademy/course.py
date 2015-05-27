@@ -25,10 +25,6 @@ class course(models.Model):
         'res.users',
         string='Responsible'
         )
-    taken_seats = fields.Integer(
-        string='Taken Seats',
-        compute='_taken_seats'
-        )
     session_ids = fields.One2many(
         'openacademy.session',
         'course_id',

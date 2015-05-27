@@ -67,6 +67,8 @@
                             /> 
                         <field name="active"
                             /> 
+                        <field name="taken_seats"
+                            /> 
                      </group>
                     </sheet>
 
@@ -91,6 +93,8 @@
                     <field name="seats"
                         />
                     <field name="instructor_id"
+                        />
+                    <field name="taken_seats"
                         />
                     <field name="state"
                         />

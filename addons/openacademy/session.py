@@ -42,14 +42,18 @@ class session(models.Model):
         string='Active',
         default=True
         )
+    taken_seats = fields.Integer(
+        string='Taken Seats',
+        compute='_taken_seats'
+        )
     state = fields.Selection(
         _states_,
         'State',
         default='draft',
         )
-    partner_ids = fields.Many2many(
+    attendee_ids = fields.Many2many(
         'res.partner',
-        'openacademy_partner_ids_session_ids_rel',
+        'openacademy_attendee_ids_session_ids_rel',
         'session_id',
         'partner_id',
         string='Partners'
@@ -63,6 +67,11 @@ class session(models.Model):
 
     _constraints = [
     ]
+
+    @api.one
+    def _taken_seats(self):
+        """"""
+        raise NotImplementedError
 
     @api.multi
     def action_cancel_draft(self):
