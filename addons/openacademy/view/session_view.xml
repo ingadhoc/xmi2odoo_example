@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- SEARCH VIEW -->
+        <record id="view_openacademy_session_filter" model="ir.ui.view">
+            <field name="name">openacademy.session.select</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <search string="session">
+                    <field name="name" string="Name"
+                            />
+                    <field name="start_date" string="Start Date"
+                            />
+                    <field name="duration" string="Durtion"
+                            />
+                    <field name="seats" string="Number of Seats"
+                            />
+                    <field name="course_id" string="course_id"
+                            />
+                    <group expand="0" string="Group By">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_openacademy_session_form" model="ir.ui.view">
+            <field name="name">openacademy.session.form</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <form string="session">
+                    <header>
+                    </header>
+                    <sheet string="session">
+                       <div class="oe_right oe_button_box" name="buttons">
+                       </div>
+                     <group>
+                        <field name="name"
+                            /> 
+                        <field name="start_date"
+                            /> 
+                        <field name="duration"
+                            /> 
+                        <field name="seats"
+                            /> 
+                        <field name="instructor_id"
+                            /> 
+                        <field name="course_id"
+                        /> 
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+        <record id="view_openacademy_session_tree" model="ir.ui.view">
+            <field name="name">openacademy.session.tree</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <tree string="session"
+                    >
+                    <field name="name"
+                        />
+                    <field name="start_date"
+                        />
+                    <field name="duration"
+                        />
+                    <field name="seats"
+                        />
+                    <field name="instructor_id"
+                        />
+                    <field name="course_id"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

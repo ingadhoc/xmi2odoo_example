@@ -1,0 +1,27 @@
+XMI2ODOO Example
+================
+
+About this example
+------------------
+We build the module similar to the one on https://www.odoo.com/documentation/8.0/howtos/backend.html but instead of programming, we use xmi2odoo (https://github.com/ctmil/xmi2odoo)
+
+Some adds
+---------
+We make some adds to the odoo howto in order to show xmi2odoo functionality. Some ot fhis adds are:
+*
+
+about branches
+--------------
+On branch:
+* xmi2odoo70: you will find base uml design and builded module for odoo v7.0
+* 70: branch with module modifications. It is rebased from xmi2odoo70
+* xmi2odoo80: you will find base uml design and builded module for odoo v8.0
+* 70: branch with module modifications. It is rebased from xmi2odoo80
+
+Build Module
+------------
+for v8:
+xmi2odoo -r -i design/xmi2odoo_example.uml -v 2 -V 8.0 -t addons
+
+for v7:
+xmi2odoo -r -i design/xmi2odoo_example.uml -v 2 -V 7.0 -t addons

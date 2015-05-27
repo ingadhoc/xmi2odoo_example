@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem
+            name="Open Academy"
+            id="menu_open_academy_main"
+            sequence="10"
+            groups="group_user"
+            />
+
+        <menuitem
+            name="Open Academy"
+            id="menu_open_academy"
+            sequence="10"
+            parent="menu_open_academy_main"
+            groups="group_user"
+            />
+
+        <menuitem
+            name="Courses"
+            id="menu_courses"
+            sequence="10"
+            parent="menu_open_academy"
+            groups="group_user"
+            />
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->
