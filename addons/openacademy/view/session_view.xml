@@ -30,6 +30,28 @@
             <field name="arch" type="xml">
                 <form string="session">
                     <header>
+                        <button name="sgn_confirm"
+                            states="draft"
+                            string="Confirm"
+                            class="oe_highlight"
+                            />
+                        <button name="action_cancel_draft"
+                            type="object"
+                            states="cancel"
+                            string="To Draft"
+                            />
+                        <button name="sgn_done"
+                            states="confirmed"
+                            string="Done"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_cancel"
+                            states="confirmed,done,draft"
+                            string="Cancel"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
                     </header>
                     <sheet string="session">
                        <div class="oe_right oe_button_box" name="buttons">
@@ -44,6 +66,8 @@
                         <field name="seats"
                             /> 
                         <field name="instructor_id"
+                            /> 
+                        <field name="active"
                             /> 
                         <field name="course_id"
                         /> 
@@ -60,6 +84,7 @@
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
                 <tree string="session"
+                    colors="grey:state=='cancelled';blue:state in (u'draft',);black:state in (u'confirmed', u'done');red:state in ()"
                     >
                     <field name="name"
                         />
@@ -72,6 +97,8 @@
                     <field name="instructor_id"
                         />
                     <field name="course_id"
+                        />
+                    <field name="state"
                         />
                 </tree>
             </field>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+        <!-- Workflow -->
+
+        <record id="session_untitle_wkf" model="workflow">
+            <field name="name">openacademy.session.untitle</field>
+            <field name="osv">openacademy.session</field>
+            <field name="on_create">True</field>
+        </record>
+
+        <!-- Activities -->
+
+        <record id="a_17F6_11EA" model="workflow.activity">
+            <field name="wkf_id" ref="session_untitle_wkf"/>
+            <field name="flow_start">True</field>
+            <field name="name">Draft</field>
+            <field name="action">
+                write({'state':'draft'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_17F6_11EB" model="workflow.activity">
+            <field name="wkf_id" ref="session_untitle_wkf"/>
+            <field name="name">Confirmed</field>
+            <field name="action">
+                write({'state':'confirmed'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_17F6_11EC" model="workflow.activity">
+            <field name="wkf_id" ref="session_untitle_wkf"/>
+            <field name="name">Done</field>
+            <field name="action">
+                write({'state':'done'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_17F6_11ED" model="workflow.activity">
+            <field name="wkf_id" ref="session_untitle_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Cancel</field>
+            <field name="action">
+                write({'state':'cancel'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+
+        <!-- Transitions -->
+
+        <record id="t_17F6_11F0" model="workflow.transition">
+            <field name="act_from" ref="a_17F6_11EA"/>
+            <field name="act_to" ref="a_17F6_11EB"/>
+            <field name="signal">sgn_confirm</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_17F6_11F1" model="workflow.transition">
+            <field name="act_from" ref="a_17F6_11EB"/>
+            <field name="act_to" ref="a_17F6_11EC"/>
+            <field name="signal">sgn_done</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_17F6_11F2" model="workflow.transition">
+            <field name="act_from" ref="a_17F6_11EC"/>
+            <field name="act_to" ref="a_17F6_11ED"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_17F6_11F3" model="workflow.transition">
+            <field name="act_from" ref="a_17F6_11EB"/>
+            <field name="act_to" ref="a_17F6_11ED"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_17F6_11F4" model="workflow.transition">
+            <field name="act_from" ref="a_17F6_11EA"/>
+            <field name="act_to" ref="a_17F6_11ED"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_17F6_11F5" model="workflow.transition">
+            <field name="act_from" ref="a_17F6_11ED"/>
+            <field name="act_to" ref="a_17F6_11EA"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->
