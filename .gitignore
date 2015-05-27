@@ -58,3 +58,4 @@ target/
 
 # UML temp files
 *.uml[cod]
+*.uml~
