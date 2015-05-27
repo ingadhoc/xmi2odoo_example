@@ -69,9 +69,12 @@ class session(models.Model):
     ]
 
     @api.one
+    @api.depends('seats', 'attendee_ids')
     def _taken_seats(self):
-        """"""
-        raise NotImplementedError
+        if not self.seats:
+            self.taken_seats = 0.0
+        else:
+            self.taken_seats = 100.0 * len(self.attendee_ids) / self.seats
 
     @api.multi
     def action_cancel_draft(self):

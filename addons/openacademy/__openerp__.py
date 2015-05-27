@@ -11,6 +11,7 @@
                 u'data/course_track.xml',
                 u'data/session_track.xml',
                 u'data/partner_track.xml',
+                'data/partner_category_data.xml',
                 u'workflow/session_workflow.xml',
                 'security/ir.model.access.csv',
                 u'view/openacademy_menuitem.xml',
