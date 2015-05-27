@@ -27,7 +27,6 @@ class session(models.Model):
         )
     duration = fields.Float(
         string='Durtion',
-        digits='(6, 2)',
         required=True
         )
     seats = fields.Integer(

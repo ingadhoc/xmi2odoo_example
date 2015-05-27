@@ -64,7 +64,7 @@
 			</model>
 		</userDefined>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue May 26 21:44:11 ART 2015'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue May 26 21:45:27 ART 2015'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -567,13 +567,6 @@
                     <UML:Stereotype href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1--66344949:13b09938a14:-8000:0000000000000BA2'/>
                   </UML:ModelElement.stereotype>
                   <UML:ModelElement.taggedValue>
-                    <UML:TaggedValue xmi.id = '127-0-0-1--8b21ad5:14d927daf53:-8000:0000000000001800'
-                      isSpecification = 'false'>
-                      <UML:TaggedValue.dataValue>(6, 2)</UML:TaggedValue.dataValue>
-                      <UML:TaggedValue.type>
-                        <UML:TagDefinition href = 'http://argouml.org/user-profiles/OpenObjectStadardElements.xmi#127-0-1-1--3588a9e:13cead26784:-8000:0000000000000F2E'/>
-                      </UML:TaggedValue.type>
-                    </UML:TaggedValue>
                     <UML:TaggedValue xmi.id = '127-0-0-1--8b21ad5:14d927daf53:-8000:0000000000001803'
                       isSpecification = 'false'>
                       <UML:TaggedValue.dataValue>Durtion</UML:TaggedValue.dataValue>
