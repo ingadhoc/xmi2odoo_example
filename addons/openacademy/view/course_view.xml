@@ -33,8 +33,6 @@
                             /> 
                         <field name="responsible_id"
                             /> 
-                        <field name="session_ids"
-                        /> 
                      </group>
                     </sheet>
 
