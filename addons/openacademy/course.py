@@ -25,6 +25,10 @@ class course(models.Model):
         'res.users',
         string='Responsible'
         )
+    taken_seats = fields.Integer(
+        string='Taken Seats',
+        compute='_taken_seats'
+        )
     session_ids = fields.One2many(
         'openacademy.session',
         'course_id',
@@ -33,5 +37,12 @@ class course(models.Model):
 
     _constraints = [
     ]
+
+    @api.one
+    def _taken_seats(self):
+        """"""
+        parent = super(course,self)
+        result = parent._taken_seats() if hasattr(parent, '_taken_seats') else False
+        return result
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

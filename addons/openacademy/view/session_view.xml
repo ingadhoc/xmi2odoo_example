@@ -15,8 +15,6 @@
                             />
                     <field name="seats" string="Number of Seats"
                             />
-                    <field name="course_id" string="Course"
-                            />
                     <group expand="0" string="Group By">
                     </group>
                 </search>
@@ -69,8 +67,6 @@
                             /> 
                         <field name="active"
                             /> 
-                        <field name="course_id"
-                        /> 
                      </group>
                     </sheet>
 
@@ -95,8 +91,6 @@
                     <field name="seats"
                         />
                     <field name="instructor_id"
-                        />
-                    <field name="course_id"
                         />
                     <field name="state"
                         />

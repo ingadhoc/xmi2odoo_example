@@ -10,6 +10,14 @@
             />
 
         <menuitem
+            name="Configuration"
+            id="menu_configuration"
+            sequence="100"
+            parent="menu_open_academy_main"
+            groups="group_manager"
+            />
+
+        <menuitem
             name="Open Academy"
             id="menu_open_academy"
             sequence="10"
@@ -22,6 +30,24 @@
             id="menu_contact_tags"
             sequence="20"
             action="base.action_partner_category_form"
+            parent="menu_configuration"
+            groups="group_manager"
+            />
+        <record id="action_res_partner_contacts" model="ir.actions.act_window">
+            <field name="name">Contacts</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"> Click to create a Contacts.</p>
+            </field>
+        </record>
+
+        <menuitem
+            name="Contacts"
+            id="menu_contacts"
+            sequence="20"
+            action="action_res_partner_contacts"
             parent="menu_open_academy"
             groups="group_user"
             />

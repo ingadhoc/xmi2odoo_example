@@ -31,8 +31,7 @@ class session(models.Model):
         )
     seats = fields.Integer(
         string='Number of Seats',
-        required=True,
-        compute='_taken_seats'
+        required=True
         )
     instructor_id = fields.Many2one(
         'res.partner',
@@ -64,11 +63,6 @@ class session(models.Model):
 
     _constraints = [
     ]
-
-    @api.one
-    def _taken_seats(self):
-        """"""
-        raise NotImplementedError
 
     @api.multi
     def action_cancel_draft(self):

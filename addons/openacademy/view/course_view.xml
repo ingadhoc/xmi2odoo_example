@@ -33,6 +33,10 @@
                             /> 
                         <field name="responsible_id"
                             /> 
+                        <field name="taken_seats"
+                            /> 
+                        <field name="session_ids"
+                        /> 
                      </group>
                     </sheet>
 
@@ -56,6 +60,8 @@
                     <field name="name"
                         />
                     <field name="responsible_id"
+                        />
+                    <field name="taken_seats"
                         />
                 </tree>
             </field>
