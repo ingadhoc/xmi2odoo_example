@@ -14,7 +14,7 @@
                 'security/ir.model.access.csv',
                 u'view/openacademy_menuitem.xml',
                 u'view/openacademy_actions.xml'],
-    'depends': [],
+    'depends': [u'mail'],
     'description': u'Manage trainings',
     'installable': True,
     'license': 'AGPL-3',

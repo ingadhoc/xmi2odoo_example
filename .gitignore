@@ -56,4 +56,5 @@ docs/_build/
 # PyBuilder
 target/
 
+# UML temp files
 *.uml[cod]

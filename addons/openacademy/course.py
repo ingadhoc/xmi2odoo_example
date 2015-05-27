@@ -8,6 +8,11 @@ class course(models.Model):
 
     _name = 'openacademy.course'
     _description = 'course'
+    _inherits = {}
+    _inherit = ['mail.thread','ir.needaction_mixin']
+
+    _track = {
+    }
 
     name = fields.Char(
         string='Name',
@@ -24,13 +29,6 @@ class course(models.Model):
         'openacademy.session',
         'course_id',
         string='session_ids'
-        )
-     = fields.Many2many(
-        'res.partner',
-        'openacademy_____rel',
-        'course_id',
-        'partner_id',
-        string='<no label>'
         )
 
     _constraints = [
