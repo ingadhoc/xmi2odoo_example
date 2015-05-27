@@ -15,7 +15,7 @@
                             />
                     <field name="seats" string="Number of Seats"
                             />
-                    <field name="course_id" string="course_id"
+                    <field name="course_id" string="Course"
                             />
                     <group expand="0" string="Group By">
                     </group>

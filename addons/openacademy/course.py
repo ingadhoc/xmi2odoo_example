@@ -28,7 +28,7 @@ class course(models.Model):
     session_ids = fields.One2many(
         'openacademy.session',
         'course_id',
-        string='session_ids'
+        string='Sessions'
         )
 
     _constraints = [
