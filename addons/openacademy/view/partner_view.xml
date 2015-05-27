@@ -18,8 +18,14 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <group position="inside">
-                </group>
+                <notebook position="inside">
+                    <page string="Sessions">
+                        <group>
+                            <field name="instructor"/>
+                            <field name="session_ids"/>
+                        </group>
+                    </page>
+                </notebook>
             </field>
         </record>
 
