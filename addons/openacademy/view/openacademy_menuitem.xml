@@ -18,9 +18,30 @@
             />
 
         <menuitem
+            name="Contact Tags"
+            id="menu_contact_tags"
+            sequence="20"
+            action="base.action_partner_category_form"
+            parent="menu_open_academy"
+            groups="group_user"
+            />
+        <record id="action_openacademy_course_courses" model="ir.actions.act_window">
+            <field name="name">Courses</field>
+            <field name="res_model">openacademy.course</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_openacademy_course_tree"/>
+            <field name="search_view_id" ref="view_openacademy_course_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"> Click to create a Courses.</p>
+            </field>
+        </record>
+
+        <menuitem
             name="Courses"
             id="menu_courses"
             sequence="10"
+            action="action_openacademy_course_courses"
             parent="menu_open_academy"
             groups="group_user"
             />

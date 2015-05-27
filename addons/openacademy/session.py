@@ -27,7 +27,8 @@ class session(models.Model):
         )
     instructor_id = fields.Many2one(
         'res.partner',
-        string='Instructor'
+        string='Instructor',
+        domain=['|',('instructor', '=', True), ('category_id.name', 'ilike', "Teacher")]
         )
     partner_ids = fields.Many2many(
         'res.partner',
